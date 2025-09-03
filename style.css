@@ -181,3 +181,35 @@ body{
   .brand{ font-size:12px; }
   .nav{ display:none }
 }
+
+.links-grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.link-card{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #0f1725, #0b121e);
+  text-decoration: none;
+  color: var(--fg);
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+.link-card .label{ font-weight: 700 }
+.link-card .hint{
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 420px){
+  .link-card{ white-space: normal }
+}
