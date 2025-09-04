@@ -27,9 +27,10 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="#top" aria-label="Yegor — iOS Developer">YEKKEE.ME</a>
+      <a class="brand" href="#top" aria-label="Yegor — iOS Developer">YEKKEE . ME</a>
       <nav class="nav">
         <a href="#about">About</a>
+        <a href="#project">Project</a>
         <a href="#pc">My PC</a>
         <a href="#links">Contacts</a>
       </nav>
@@ -38,6 +39,7 @@
   </header>
 
   <main id="top">
+    <!-- Hero -->
     <section class="hero container">
       <h1 class="title">
         Yegor <span class="accent">iOS</span> Developer
@@ -48,11 +50,9 @@
         and a focus on testing and performance.
       </p>
 
-      <!-- Чистый CSS Pac-Man -->
+      <!-- Simple pacman track (CSS only) -->
       <div class="pac-track" aria-hidden="true">
-        <div class="pacman">
-          <div class="pacmouth"></div>
-        </div>
+        <div class="pacman"><div class="pacmouth"></div></div>
         <div class="dots">
           <span></span><span></span><span></span><span></span><span></span>
           <span></span><span></span><span></span><span></span><span></span>
@@ -60,25 +60,77 @@
       </div>
     </section>
 
+    <!-- Project -->
+    <section id="project" class="section container">
+      <h2 class="section-title">Current Project</h2>
+
+      <div class="about">
+        <p style="margin-top:0">
+          I’m building an app for reading books in English with <strong>inline word translation</strong>.
+          Translated words are saved automatically to grow your personal vocabulary. The project is in progress —
+          here’s a short demo:
+        </p>
+
+        <!-- Video demo -->
+        <div class="demo-video">
+          <video controls preload="metadata" playsinline>
+            <source src="assets/reading-demo.mp4" type="video/mp4">
+            Your browser doesn’t support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <!-- Road to MVP (flat, no nested cards) -->
+      <div class="about" style="margin-top:16px">
+        <h3 class="section-title" style="margin:0 0 10px;">Road to MVP</h3>
+        <p style="margin:0 0 10px;">
+          Foundation is ready. Time to define the MVP flow and ship the first build.
+          Stack and scope are intentionally small and focused:
+        </p>
+
+        <p style="margin:12px 0 6px;"><strong>Tech stack</strong></p>
+        <ul class="bullets">
+          <li><strong>UI:</strong> SwiftUI — lightweight views, adaptive layout, smooth animations</li>
+          <li><strong>Reactive:</strong> Combine — streamlined bindings, debounced lookups, cancellation</li>
+          <li><strong>Architecture:</strong> MVVM — testable, modular, preview-friendly</li>
+          <li><strong>Storage:</strong> Core Data or SwiftData — lean models, predictable migrations</li>
+        </ul>
+
+        <p style="margin:12px 0 6px;"><strong>MVP scope</strong></p>
+        <ul class="bullets">
+          <li><strong>Settings tab:</strong> font size slider, clear database (with confirmation)</li>
+          <li><strong>Books:</strong> open local books and keep them in a library (cover, title, progress)</li>
+          <li><strong>Reader basics:</strong> comfortable pagination, night mode, quick navigation</li>
+          <li><strong>Inline translation:</strong> tap a word → instant translation overlay</li>
+          <li><strong>Vocabulary:</strong> auto-save translated words for later review</li>
+        </ul>
+
+        <p style="margin-top:10px; color:var(--muted)">
+          Next steps: wire up the translation pipeline, polish the reading experience, and push a TestFlight build.
+        </p>
+      </div>
+    </section>
+
+    <!-- About -->
     <section id="about" class="section container">
       <h2 class="section-title">About Me</h2>
       <div class="about">
         <p>
           I’m Yegor — an iOS developer focusing on modern app architecture, automation, and performance.
-          I’m passionate about testing — from writing solid unit tests to full UI test plans —
-          and I keep up with today’s popular skills like reactive programming, modular project setup,
-          and CI/CD best practices.
+          I care about testing — from solid unit tests to full UI test plans — and keep up with today’s
+          popular practices like reactive programming, modular project setup, and CI/CD best practices.
         </p>
         <ul class="bullets">
           <li>Swift (UIKit, SwiftUI, Concurrency)</li>
           <li>RxSwift / Combine</li>
           <li>XcodeGen, SPM, Fastlane</li>
-          <li>CI/CD with GitHub & GitLab</li>
-          <li>Unit tests & UI tests (XCTest, test plans)</li>
+          <li>CI/CD with GitHub &amp; GitLab</li>
+          <li>Unit tests &amp; UI tests (XCTest, test plans)</li>
         </ul>
       </div>
     </section>
 
+    <!-- PC -->
     <section id="pc" class="section container">
       <h2 class="section-title">My PC Build</h2>
       <div class="about">
@@ -89,7 +141,7 @@
           <li><strong>RAM:</strong> 32 GB DDR5-6000 CL36 Kingston FURY Beast RGB (2×16 GB)</li>
           <li><strong>Storage:</strong> Samsung 990 PRO 4 TB (M.2 NVMe) + Samsung 970 EVO Plus 1 TB</li>
           <li><strong>Cooling:</strong> DeepCool LS520 (240 mm AIO)</li>
-          <li><strong>Case:</strong> ARDOR GAMING C305 V2 (glass front & side, black)</li>
+          <li><strong>Case:</strong> ARDOR GAMING C305 V2 (glass front &amp; side, black)</li>
           <li><strong>Fans:</strong> 7× ARGB 120 mm with hub</li>
           <li><strong>PSU:</strong> Seasonic Focus GX-850 (850W, 80+ Gold)</li>
           <li><strong>Monitor:</strong> 27″ IPS, 2560×1440 @ 170 Hz, Adaptive-Sync</li>
@@ -97,56 +149,7 @@
       </div>
     </section>
 
-    <section id="project" class="section container">
-      <h2 class="section-title">Current Project</h2>
-          <div class="about">
-           <p>
-              I’m building an app that allows reading books in English with inline word translation.  
-              Translated words are saved for later review, helping to build up vocabulary.  
-              The project is still in progress — here’s a quick demo:
-            </p>
-            <div class="demo-video">
-              <video controls preload="metadata" width="100%" poster="/assets/reading-demo-poster.png">
-                <source src="assets/reading-demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-        </section>
-    <div class="about" style="margin-top:12px">
-  <h3 class="section-title" style="margin-bottom:10px;">Road to MVP</h3>
-
-  <p style="margin:0 0 10px;">
-    The foundation is in place. Time to shape the MVP flow and ship a first build to the Store.
-    Here’s the current stack and the minimal feature set to land:
-  </p>
-
-  <div class="about" style="margin-top:10px">
-    <p style="margin:0 0 6px;"><strong>Tech stack (clean and modern):</strong></p>
-    <ul class="bullets">
-      <li><strong>UI:</strong> SwiftUI (lightweight views, adaptive layout, smooth animations)</li>
-      <li><strong>Reactive:</strong> Combine (streamlined bindings, debounced lookups, cancellation)</li>
-      <li><strong>Architecture:</strong> MVVM (testable, modular, preview-friendly)</li>
-      <li><strong>Storage:</strong> Core Data or SwiftData (lean models, predictable migrations)</li>
-    </ul>
-  </div>
-
-  <div class="about" style="margin-top:10px">
-    <p style="margin:0 0 6px;"><strong>MVP scope (small but useful):</strong></p>
-    <ul class="bullets">
-      <li><strong>Settings tab:</strong> font size slider, clear database action (with confirmation)</li>
-      <li><strong>Books:</strong> open local books and keep them in a library (cover, title, progress)</li>
-      <li><strong>Reader basics:</strong> comfortable pagination, night mode, quick navigation</li>
-      <li><strong>Inline translation:</strong> tap a word → instant translation overlay</li>
-      <li><strong>Vocabulary:</strong> auto-save translated words for later review</li>
-    </ul>
-  </div>
-
-  <p style="margin-top:10px; color:var(--muted)">
-    Next steps: wire up translation pipeline, polish reading experience, and push the TestFlight build.
-  </p>
-</div>
-
+    <!-- Contacts -->
     <section id="links" class="section container">
       <h2 class="section-title">Contacts</h2>
       <div class="links-grid">
@@ -155,21 +158,25 @@
           <span class="label">GitHub</span>
           <span class="hint">@yegorskikh</span>
         </a>
+
         <a class="link-card" href="https://t.me/yegorskikh" target="_blank" rel="noopener">
           <span class="icon" aria-hidden="true">💬</span>
           <span class="label">Telegram</span>
           <span class="hint">@yegorskikh</span>
         </a>
+
         <a class="link-card" href="mailto:yegorskikh@gmail.com" target="_blank" rel="noopener">
           <span class="icon" aria-hidden="true">📧</span>
           <span class="label">Email</span>
           <span class="hint">yegorskikh@gmail.com</span>
         </a>
+
         <a class="link-card" href="https://www.linkedin.com/in/yegorskikh" target="_blank" rel="noopener">
           <span class="icon" aria-hidden="true">💼</span>
           <span class="label">LinkedIn</span>
           <span class="hint">/in/yegorskikh</span>
         </a>
+
         <a class="link-card" href="https://steamcommunity.com/id/yekkee/" target="_blank" rel="noopener">
           <span class="icon" aria-hidden="true">🎮</span>
           <span class="label">Steam</span>
@@ -186,9 +193,14 @@
   </footer>
 
   <script>
+    // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Respect reduced motion
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mq.matches) document.documentElement.classList.add('reduce-motion');
+    if (mq.matches) {
+      document.documentElement.classList.add('reduce-motion');
+    }
   </script>
 </body>
 </html>
