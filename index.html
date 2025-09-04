@@ -1,15 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- PWA manifest -->
+  <link rel="manifest" href="/manifest.json">
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Yegor — iOS Developer</title>
   <meta name="description" content="Personal page of Yegor (iOS Developer). GitHub, Telegram, Email, LinkedIn." />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="/assets/ghost.svg">
+  <link rel="icon" type="image/png" href="/assets/ghost-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/ghost-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
+  <link rel="mask-icon" href="/assets/ghost-pinned.svg" color="#ff3cf7">
   <meta name="theme-color" content="#0b0f14">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -27,28 +39,26 @@
 
   <main id="top">
     <section class="hero container">
-      <h1 class="title">Yegor <span class="accent">iOS</span> Developer</h1>
+      <h1 class="title">
+        Yegor <span class="accent">iOS</span> Developer
+      </h1>
       <p class="subtitle">
         Hi! I’m Yegor — an iOS developer passionate about creating clean, reliable,
         and user-friendly apps. I enjoy building modular projects with solid CI/CD pipelines
         and a focus on testing and performance.
       </p>
-    </section>
 
-    <!-- Runner after HERO — средняя скорость -->
-    <div class="runner" data-speed="7" aria-hidden="true">
-      <div class="lane ghosts">
-        <img src="assets/ghost.png" alt="" class="g">
-        <img src="assets/ghost.png" alt="" class="g" style="--delay:1.2s">
-        <img src="assets/ghost.png" alt="" class="g" style="--delay:2.4s">
+      <!-- Чистый CSS Pac-Man -->
+      <div class="pac-track" aria-hidden="true">
+        <div class="pacman">
+          <div class="pacmouth"></div>
+        </div>
+        <div class="dots">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
       </div>
-      <div class="lane pacmen">
-        <img src="assets/pacman.png" alt="" class="p">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:.8s">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.6s">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:2.4s">
-      </div>
-    </div>
+    </section>
 
     <section id="about" class="section container">
       <h2 class="section-title">About Me</h2>
@@ -69,19 +79,6 @@
       </div>
     </section>
 
-    <!-- Runner after ABOUT — помедленнее -->
-    <div class="runner" data-speed="9" aria-hidden="true">
-      <div class="lane ghosts">
-        <img src="assets/ghost.png" alt="" class="g">
-        <img src="assets/ghost.png" alt="" class="g" style="--delay:1.6s">
-      </div>
-      <div class="lane pacmen">
-        <img src="assets/pacman.png" alt="" class="p">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.2s">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:2.4s">
-      </div>
-    </div>
-
     <section id="pc" class="section container">
       <h2 class="section-title">My PC Build</h2>
       <div class="about">
@@ -99,21 +96,6 @@
         </ul>
       </div>
     </section>
-
-    <!-- Runner after PC — побыстрее -->
-    <div class="runner" data-speed="5.5" aria-hidden="true">
-      <div class="lane ghosts">
-        <img src="assets/ghost.png" alt="" class="g">
-        <img src="assets/ghost.png" alt="" class="g" style="--delay:.9s">
-        <img src="assets/ghost.png" alt="" class="g" style="--delay:1.8s">
-      </div>
-      <div class="lane pacmen">
-        <img src="assets/pacman.png" alt="" class="p">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:.7s">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.4s">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:2.1s">
-      </div>
-    </div>
 
     <section id="links" class="section container">
       <h2 class="section-title">Contacts</h2>
@@ -145,24 +127,6 @@
         </a>
       </div>
     </section>
-
-    <!-- Runner after CONTACTS — самая быстрая -->
-    <div class="runner" data-speed="4.5" aria-hidden="true">
-      <div class="lane ghosts">
-        <img src="assets/ghost.png" alt="" class="g">
-        <img src="assets/ghost.png" alt="" class="g" style="--delay:.7s">
-        <img src="assets/ghost.png" alt="" class="g" style="--delay:1.4s">
-        <img src="assets/ghost.png" alt="" class="g" style="--delay:2.1s">
-      </div>
-      <div class="lane pacmen">
-        <img src="assets/pacman.png" alt="" class="p">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:.5s">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.0s">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.5s">
-        <img src="assets/pacman.png" alt="" class="p" style="--delay:2.0s">
-      </div>
-    </div>
-
   </main>
 
   <footer class="site-footer">
@@ -173,6 +137,8 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) document.documentElement.classList.add('reduce-motion');
   </script>
 </body>
 </html>
