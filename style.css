@@ -180,3 +180,54 @@ body{
   .brand{ font-size:12px; }
   .nav{ display:none; }
 }
+
+/* === Animated ghost chase === */
+.chase{
+  position: relative;
+  height: 40px;
+  margin-top: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* двигающееся приведение */
+.ghost{
+  width: 30px; height: 30px;
+  filter: drop-shadow(0 0 12px rgba(255,60,247,.55));
+  animation: ghost-run 6s linear infinite;
+}
+
+@keyframes ghost-run{
+  from { transform: translateX(-56px); }
+  to   { transform: translateX(calc(100% + 56px)); }
+}
+
+/* ряд Pac-Man'ов справа, которых "едят" */
+.prey{
+  position: absolute;
+  left: 56px; right: 0;
+  display: flex; align-items: center;
+  gap: 26px;
+}
+
+.pm{ width: 22px; height: 22px; animation: pm-vanish 6s linear infinite; }
+
+/* по очереди исчезают */
+.pm1 { animation-delay: .55s }
+.pm2 { animation-delay: 1.15s }
+.pm3 { animation-delay: 1.75s }
+.pm4 { animation-delay: 2.35s }
+.pm5 { animation-delay: 2.95s }
+.pm6 { animation-delay: 3.55s }
+.pm7 { animation-delay: 4.15s }
+.pm8 { animation-delay: 4.75s }
+
+@keyframes pm-vanish{
+  0%, 12% { opacity: 1; }
+  22%,100%{ opacity: 0; }
+}
+
+/* уважение к prefers-reduced-motion */
+.reduce-motion .ghost,
+.reduce-motion .pm { animation: none }
