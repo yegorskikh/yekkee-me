@@ -48,8 +48,8 @@
         and a focus on testing and performance.
       </p>
 
-      <!-- Animated chase: ghost eats Pac-Men -->
-      <div class="chase" aria-hidden="true">
+      <!-- Track #1 (Hero) — 6s -->
+      <div class="chase" data-dur="6" aria-hidden="true">
         <img src="assets/ghost.png" class="ghost" width="32" height="32" alt="" loading="eager" decoding="async" draggable="false" />
         <div class="prey">
           <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
@@ -65,6 +65,19 @@
     </section>
 
     <section id="about" class="section container">
+      <!-- Track #2 (Before About content) — 7.5s -->
+      <div class="chase" data-dur="7.5" aria-hidden="true">
+        <img src="assets/ghost.png" class="ghost" width="32" height="32" alt="" decoding="async" />
+        <div class="prey">
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+        </div>
+      </div>
+
       <h2 class="section-title">About Me</h2>
       <div class="about">
         <p>
@@ -84,6 +97,18 @@
     </section>
 
     <section id="pc" class="section container">
+      <!-- Track #3 (Before PC) — 5.5s -->
+      <div class="chase" data-dur="5.5" aria-hidden="true">
+        <img src="assets/ghost.png" class="ghost" width="32" height="32" alt="" decoding="async" />
+        <div class="prey">
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+        </div>
+      </div>
+
       <h2 class="section-title">My PC Build</h2>
       <div class="about">
         <ul class="bullets">
@@ -102,6 +127,17 @@
     </section>
 
     <section id="links" class="section container">
+      <!-- Track #4 (Before Contacts) — 4.8s -->
+      <div class="chase" data-dur="4.8" aria-hidden="true">
+        <img src="assets/ghost.png" class="ghost" width="32" height="32" alt="" decoding="async" />
+        <div class="prey">
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
+        </div>
+      </div>
+
       <h2 class="section-title">Contacts</h2>
       <div class="links-grid">
         <a class="link-card" href="https://github.com/yegorskikh" target="_blank" rel="noopener">
@@ -147,32 +183,32 @@
     // год в футере
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Форсим анимацию даже при prefers-reduced-motion
+    // включаем анимации даже при prefers-reduced-motion
     document.documentElement.classList.add('force-anim');
 
-    // Надёжный запуск анимации после декодирования изображений
+    // Инициализация ВСЕХ дорожек
     (async () => {
-      const chase = document.querySelector('.chase');
-      if (!chase) return;
+      const tracks = document.querySelectorAll('.chase');
+      for (const track of tracks) {
+        const dur = parseFloat(track.dataset.dur || '6') || 6;
+        // пробрасываем длительность в CSS-переменную уровня блока
+        track.style.setProperty('--dur', dur + 's');
 
-      const root = document.documentElement;
-      const durStr = getComputedStyle(root).getPropertyValue('--chase-dur').trim();
-      const dur = parseFloat(durStr) || 6; // сек
+        const imgs = track.querySelectorAll('img');
+        const pacmen = track.querySelectorAll('.pm');
 
-      const pms = chase.querySelectorAll('.prey .pm');
-      const imgs = chase.querySelectorAll('img');
+        // ждём декод изображений (важно для Chrome)
+        await Promise.all([...imgs].map(img => img.decode ? img.decode().catch(()=>{}) : Promise.resolve()));
 
-      // Ждём декодирование всех картинок в блоке
-      await Promise.all([...imgs].map(img => (img.decode ? img.decode().catch(()=>{}) : Promise.resolve())));
+        // равномерные отрицательные задержки — едят по одному
+        const step = dur / (pacmen.length + 1);
+        pacmen.forEach((pm, i) => {
+          pm.style.animationDelay = `${-(i + 1) * step}s`;
+        });
 
-      // Расставляем отрицательные задержки равномерно: исчезают по одному за цикл
-      const step = dur / (pms.length + 1);
-      pms.forEach((el, i) => {
-        el.style.animationDelay = `${-(i + 1) * step}s`;
-      });
-
-      // Стартануть анимации
-      chase.classList.add('on');
+        // запуск анимации
+        track.classList.add('on');
+      }
     })();
   </script>
 </body>

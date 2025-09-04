@@ -10,9 +10,7 @@
   --border:#1e2a3a;
   --radius:20px;
   --shadow:0 10px 30px rgba(0,0,0,.35);
-
-  /* Длительность одного пробега привидения */
-  --chase-dur: 6s;
+  --chase-gap:30px;          /* расстояние между Pac-Man’ами */
 }
 
 *{ box-sizing:border-box }
@@ -27,11 +25,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-.container{
-  max-width:980px;
-  margin:0 auto;
-  padding:24px;
-}
+.container{ max-width:980px; margin:0 auto; padding:24px; }
 
 /* Header */
 .site-header{
@@ -40,10 +34,7 @@ body{
   backdrop-filter: blur(8px);
   border-bottom:1px solid var(--border);
 }
-.site-header .container{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:16px;
-}
+.site-header .container{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
 .brand{
   font-family:"Press Start 2P", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   font-size:14px; letter-spacing:.08em;
@@ -56,12 +47,11 @@ body{
 }
 .nav a{
   color:var(--muted); text-decoration:none; font-weight:500;
-  padding:10px 12px; border-radius:10px;
-  border:1px solid transparent;
+  padding:10px 12px; border-radius:10px; border:1px solid transparent;
 }
 .nav a:hover{ color:var(--fg); border-color:var(--border); background:var(--bg-2) }
 
-/* Top strip (tetris vibe) */
+/* Tetris strip */
 .tetris-strip{
   height:10px; border-top:1px solid var(--border);
   background:
@@ -75,37 +65,18 @@ body{
 }
 @keyframes slide{ to { background-position: -600px 0, -800px 0, -1000px 0 } }
 
-/* Hero */
-.hero{
-  padding-top:56px; padding-bottom:24px;
-  display:grid; gap:16px;
-}
-.title{
-  font-size: clamp(28px, 5.2vw, 56px);
-  margin:0;
-  letter-spacing:.5px;
-  font-weight:800;
-}
-.title .accent{
-  color:var(--accent);
-  text-shadow: 0 0 14px rgba(56,232,255,.55), 0 0 32px rgba(56,232,255,.35);
-}
-.subtitle{
-  color:var(--muted);
-  font-size:clamp(14px, 2.2vw, 18px);
-  max-width:70ch;
-}
+/* Hero / sections */
+.hero{ padding-top:56px; padding-bottom:24px; display:grid; gap:16px; }
+.title{ font-size: clamp(28px, 5.2vw, 56px); margin:0; letter-spacing:.5px; font-weight:800; }
+.title .accent{ color:var(--accent); text-shadow:0 0 14px rgba(56,232,255,.55), 0 0 32px rgba(56,232,255,.35) }
+.subtitle{ color:var(--muted); font-size:clamp(14px, 2.2vw, 18px); max-width:70ch; }
 
-/* Sections */
 .section{ padding:24px 0 8px }
 .section-title{
   font-family:"Press Start 2P", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size:16px; letter-spacing:.06em;
-  margin:0 0 16px; color:var(--fg);
+  font-size:16px; letter-spacing:.06em; margin:0 0 16px; color:var(--fg);
   text-shadow:0 0 8px rgba(255,60,247,.35);
 }
-
-/* Cards (about & PC) */
 .about{
   background:linear-gradient(180deg, #0e1521, #0b121e);
   border:1px solid var(--border);
@@ -117,99 +88,54 @@ body{
 .bullets{ margin:0; padding-left:18px; color:var(--muted) }
 .bullets li{ margin:6px 0 }
 
-/* Contacts grid */
-.links-grid{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  justify-content:flex-start;
-}
+/* Contacts */
+.links-grid{ display:flex; flex-wrap:wrap; gap:12px; justify-content:flex-start; }
 .link-card{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 14px;
-  border-radius:14px;
-  border:1px solid var(--border);
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 14px; border-radius:14px; border:1px solid var(--border);
   background:linear-gradient(180deg, #0f1725, #0b121e);
-  text-decoration:none;
-  color:var(--fg);
-  max-width:100%;
-  white-space:nowrap;
+  text-decoration:none; color:var(--fg); max-width:100%; white-space:nowrap;
   box-shadow: var(--shadow), inset 0 0 0 1px rgba(255,60,247,.08);
   transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .link-card .icon{ color:var(--accent) }
 .link-card .label{ font-weight:700 }
-.link-card .hint{
-  color:var(--muted);
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-.link-card:hover{
-  transform: translateY(-2px);
-  border-color: rgba(56,232,255,.35);
-  box-shadow: 0 8px 30px rgba(56,232,255,.15), inset 0 0 0 1px rgba(56,232,255,.12);
-}
-@media (max-width:420px){
-  .link-card{ white-space:normal }
-}
+.link-card .hint{ color:var(--muted); overflow:hidden; text-overflow:ellipsis; }
+.link-card:hover{ transform: translateY(-2px); border-color: rgba(56,232,255,.35); box-shadow: 0 8px 30px rgba(56,232,255,.15), inset 0 0 0 1px rgba(56,232,255,.12) }
+@media (max-width:420px){ .link-card{ white-space:normal } }
 
 /* Footer */
-.site-footer{
-  margin-top:20px;
-  border-top:1px solid var(--border);
-  background:linear-gradient(180deg, #0b121e, #0b0f14);
-}
-.site-footer .container{
-  display:flex; align-items:center; justify-content:center;
-  color:var(--muted); font-size:14px;
-}
-.mono{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  color:var(--fg);
-}
+.site-footer{ margin-top:20px; border-top:1px solid var(--border); background:linear-gradient(180deg, #0b121e, #0b0f14) }
+.site-footer .container{ display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:14px }
+.mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; color:var(--fg) }
 
-/* === Animated ghost chase === */
+/* === Animated Ghost Chase (универсально для множества дорожек) === */
 .chase{
-  position: relative;
-  height: 40px;
-  margin-top: 8px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+  position:relative; height:40px; margin:10px 0 6px; overflow:hidden;
+  display:flex; align-items:center;
 }
 .chase img{ display:block; }
 
-/* ряд пакманов справа */
-.prey{
-  position: absolute;
-  left: 56px;
-  right: 0;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-/* PNG-иконки + анимация */
 .ghost{
-  width: 30px; height: 30px;
+  width:30px; height:30px;
   filter: drop-shadow(0 0 12px rgba(255,60,247,.55));
-  animation: ghost-run var(--chase-dur) linear infinite;
+  animation: ghost-run var(--dur, 6s) linear infinite;
   will-change: transform;
 }
+.prey{
+  position:absolute; left:56px; right:0;
+  display:flex; align-items:center; gap: var(--chase-gap);
+}
 .pm{
-  width: 22px; height: 22px;
-  animation: pm-vanish var(--chase-dur) linear infinite;
+  width:22px; height:22px;
+  animation: pm-vanish var(--dur, 6s) linear infinite;
   animation-fill-mode: both;
   will-change: opacity;
 }
 
-/* пока не получим .on — пауза, чтобы дождаться декодирования PNG */
+/* пока не включили дорожку — пауза (ждём decode PNG) */
 .chase:not(.on) .ghost,
-.chase:not(.on) .pm{
-  animation-play-state: paused;
-}
+.chase:not(.on) .pm{ animation-play-state: paused; }
 
 /* ключевые кадры */
 @keyframes ghost-run{
@@ -221,6 +147,6 @@ body{
   92%, 100% { opacity: 0; }
 }
 
-/* форс, если что-то глушит */
-.force-anim .ghost{ animation: ghost-run var(--chase-dur) linear infinite !important; }
-.force-anim .pm   { animation: pm-vanish var(--chase-dur) linear infinite !important; }
+/* форс на случай системных ограничений */
+.force-anim .ghost{ animation: ghost-run var(--dur, 6s) linear infinite !important; }
+.force-anim .pm   { animation: pm-vanish var(--dur, 6s) linear infinite !important; }
