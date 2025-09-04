@@ -11,7 +11,8 @@
   --radius:20px;
   --shadow:0 10px 30px rgba(0,0,0,.35);
 
-  --chase-dur: 6s; /* длительность пробега привидения */
+  /* Длительность одного пробега привидения */
+  --chase-dur: 6s;
 }
 
 *{ box-sizing:border-box }
@@ -178,6 +179,7 @@ body{
   display: flex;
   align-items: center;
 }
+.chase img{ display:block; }
 
 /* ряд пакманов справа */
 .prey{
@@ -189,41 +191,36 @@ body{
   gap: 30px;
 }
 
-/* PNG-иконки с анимацией */
-/* PNG-иконки с анимацией */
+/* PNG-иконки + анимация */
 .ghost{
   width: 30px; height: 30px;
   filter: drop-shadow(0 0 12px rgba(255,60,247,.55));
   animation: ghost-run var(--chase-dur) linear infinite;
+  will-change: transform;
 }
-
 .pm{
   width: 22px; height: 22px;
   animation: pm-vanish var(--chase-dur) linear infinite;
-  animation-fill-mode: both;          /* держим корректные состояния на старте/конце */
+  animation-fill-mode: both;
+  will-change: opacity;
 }
 
-/* смещения по фазе — ОТРИЦАТЕЛЬНЫЕ! */
-.pm1 { animation-delay: -0.90s; }
-.pm2 { animation-delay: -1.60s; }
-.pm3 { animation-delay: -2.30s; }
-.pm4 { animation-delay: -3.00s; }
-.pm5 { animation-delay: -3.70s; }
-.pm6 { animation-delay: -4.40s; }
-.pm7 { animation-delay: -5.10s; }
-.pm8 { animation-delay: -5.80s; }
+/* пока не получим .on — пауза, чтобы дождаться декодирования PNG */
+.chase:not(.on) .ghost,
+.chase:not(.on) .pm{
+  animation-play-state: paused;
+}
 
-/* ключевые кадры (можно оставить как есть) */
+/* ключевые кадры */
 @keyframes ghost-run{
   from { transform: translateX(-56px); }
   to   { transform: translateX(calc(100% + 56px)); }
 }
 @keyframes pm-vanish{
-  0%, 80%   { opacity: 1; }
+  0%, 82%   { opacity: 1; }
   92%, 100% { opacity: 0; }
 }
 
-
-/* на всякий случай форсим */
-.force-anim .ghost { animation: ghost-run var(--chase-dur) linear infinite !important; }
-.force-anim .pm    { animation: pm-vanish var(--chase-dur) linear infinite !important; }
+/* форс, если что-то глушит */
+.force-anim .ghost{ animation: ghost-run var(--chase-dur) linear infinite !important; }
+.force-anim .pm   { animation: pm-vanish var(--chase-dur) linear infinite !important; }
