@@ -10,6 +10,8 @@
   --border:#1e2a3a;
   --radius:20px;
   --shadow:0 10px 30px rgba(0,0,0,.35);
+
+  --chase-dur: 6s; /* длительность пробега привидения */
 }
 
 *{ box-sizing:border-box }
@@ -168,39 +170,57 @@ body{
 }
 
 /* === Animated ghost chase === */
-:root{
-  /* одна точка правды — длительность пробега привидения */
-  --chase-dur: 6s;
-}
-
 .chase{
-  position:relative; height:40px; margin-top:8px; overflow:hidden;
-  display:flex; align-items:center;
+  position: relative;
+  height: 40px;
+  margin-top: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-/* привидение едет слева направо за --chase-dur */
-/* совместимость для PNG-иконок */
-.ghost { 
+/* ряд пакманов справа */
+.prey{
+  position: absolute;
+  left: 56px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+/* PNG-иконки с анимацией */
+.ghost{
   width: 30px; height: 30px;
   filter: drop-shadow(0 0 12px rgba(255,60,247,.55));
   animation: ghost-run var(--chase-dur) linear infinite;
 }
 
-.pm { 
+.pm{
   width: 22px; height: 22px;
   animation: pm-vanish var(--chase-dur) linear infinite;
 }
 
-/* те же задержки, что и для .pm-svg */
-.pm1 { animation-delay: .90s; }
-.pm2 { animation-delay: 1.60s; }
-.pm3 { animation-delay: 2.30s; }
-.pm4 { animation-delay: 3.00s; }
-.pm5 { animation-delay: 3.70s; }
-.pm6 { animation-delay: 4.40s; }
-.pm7 { animation-delay: 5.10s; }
-.pm8 { animation-delay: 5.80s; }
+/* задержки исчезновения для каждого пакмана */
+.pm1 { animation-delay: .90s }
+.pm2 { animation-delay: 1.60s }
+.pm3 { animation-delay: 2.30s }
+.pm4 { animation-delay: 3.00s }
+.pm5 { animation-delay: 3.70s }
+.pm6 { animation-delay: 4.40s }
+.pm7 { animation-delay: 5.10s }
+.pm8 { animation-delay: 5.80s }
 
-/* если где-то что-то глушит анимации — форсим */
+/* ключевые кадры */
+@keyframes ghost-run{
+  from { transform: translateX(-56px); }
+  to   { transform: translateX(calc(100% + 56px)); }
+}
+@keyframes pm-vanish{
+  0%, 80%   { opacity: 1; }
+  92%, 100% { opacity: 0; }
+}
+
+/* на всякий случай форсим */
 .force-anim .ghost { animation: ghost-run var(--chase-dur) linear infinite !important; }
 .force-anim .pm    { animation: pm-vanish var(--chase-dur) linear infinite !important; }
