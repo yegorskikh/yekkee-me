@@ -1,27 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- PWA manifest -->
-  <link rel="manifest" href="/manifest.json">
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Yegor — iOS Developer</title>
   <meta name="description" content="Personal page of Yegor (iOS Developer). GitHub, Telegram, Email, LinkedIn." />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="/assets/ghost.svg">
-  <link rel="icon" type="image/png" href="/assets/ghost-32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/assets/ghost-192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
-  <link rel="mask-icon" href="/assets/ghost-pinned.svg" color="#ff3cf7">
   <meta name="theme-color" content="#0b0f14">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -39,45 +27,30 @@
 
   <main id="top">
     <section class="hero container">
-      <h1 class="title">
-        Yegor <span class="accent">iOS</span> Developer
-      </h1>
+      <h1 class="title">Yegor <span class="accent">iOS</span> Developer</h1>
       <p class="subtitle">
         Hi! I’m Yegor — an iOS developer passionate about creating clean, reliable,
         and user-friendly apps. I enjoy building modular projects with solid CI/CD pipelines
         and a focus on testing and performance.
       </p>
-
-      <!-- Track #1 (Hero) — 6s -->
-      <div class="chase" data-dur="6" aria-hidden="true">
-        <img src="assets/ghost.png" class="ghost" width="32" height="32" alt="" loading="eager" decoding="async" draggable="false" />
-        <div class="prey">
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
-        </div>
-      </div>
     </section>
 
-    <section id="about" class="section container">
-      <!-- Track #2 (Before About content) — 7.5s -->
-      <div class="chase" data-dur="7.5" aria-hidden="true">
-        <img src="assets/ghost.png" class="ghost" width="32" height="32" alt="" decoding="async" />
-        <div class="prey">
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-        </div>
+    <!-- Runner after HERO — средняя скорость -->
+    <div class="runner" data-speed="7" aria-hidden="true">
+      <div class="lane ghosts">
+        <img src="assets/ghost.png" alt="" class="g">
+        <img src="assets/ghost.png" alt="" class="g" style="--delay:1.2s">
+        <img src="assets/ghost.png" alt="" class="g" style="--delay:2.4s">
       </div>
+      <div class="lane pacmen">
+        <img src="assets/pacman.png" alt="" class="p">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:.8s">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.6s">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:2.4s">
+      </div>
+    </div>
 
+    <section id="about" class="section container">
       <h2 class="section-title">About Me</h2>
       <div class="about">
         <p>
@@ -96,19 +69,20 @@
       </div>
     </section>
 
-    <section id="pc" class="section container">
-      <!-- Track #3 (Before PC) — 5.5s -->
-      <div class="chase" data-dur="5.5" aria-hidden="true">
-        <img src="assets/ghost.png" class="ghost" width="32" height="32" alt="" decoding="async" />
-        <div class="prey">
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-        </div>
+    <!-- Runner after ABOUT — помедленнее -->
+    <div class="runner" data-speed="9" aria-hidden="true">
+      <div class="lane ghosts">
+        <img src="assets/ghost.png" alt="" class="g">
+        <img src="assets/ghost.png" alt="" class="g" style="--delay:1.6s">
       </div>
+      <div class="lane pacmen">
+        <img src="assets/pacman.png" alt="" class="p">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.2s">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:2.4s">
+      </div>
+    </div>
 
+    <section id="pc" class="section container">
       <h2 class="section-title">My PC Build</h2>
       <div class="about">
         <ul class="bullets">
@@ -126,18 +100,22 @@
       </div>
     </section>
 
-    <section id="links" class="section container">
-      <!-- Track #4 (Before Contacts) — 4.8s -->
-      <div class="chase" data-dur="4.8" aria-hidden="true">
-        <img src="assets/ghost.png" class="ghost" width="32" height="32" alt="" decoding="async" />
-        <div class="prey">
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-          <img src="assets/pacman.png" class="pm" width="22" height="22" alt="" />
-        </div>
+    <!-- Runner after PC — побыстрее -->
+    <div class="runner" data-speed="5.5" aria-hidden="true">
+      <div class="lane ghosts">
+        <img src="assets/ghost.png" alt="" class="g">
+        <img src="assets/ghost.png" alt="" class="g" style="--delay:.9s">
+        <img src="assets/ghost.png" alt="" class="g" style="--delay:1.8s">
       </div>
+      <div class="lane pacmen">
+        <img src="assets/pacman.png" alt="" class="p">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:.7s">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.4s">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:2.1s">
+      </div>
+    </div>
 
+    <section id="links" class="section container">
       <h2 class="section-title">Contacts</h2>
       <div class="links-grid">
         <a class="link-card" href="https://github.com/yegorskikh" target="_blank" rel="noopener">
@@ -145,25 +123,21 @@
           <span class="label">GitHub</span>
           <span class="hint">@yegorskikh</span>
         </a>
-
         <a class="link-card" href="https://t.me/yegorskikh" target="_blank" rel="noopener">
           <span class="icon" aria-hidden="true">💬</span>
           <span class="label">Telegram</span>
           <span class="hint">@yegorskikh</span>
         </a>
-
         <a class="link-card" href="mailto:yegorskikh@gmail.com" target="_blank" rel="noopener">
           <span class="icon" aria-hidden="true">📧</span>
           <span class="label">Email</span>
           <span class="hint">yegorskikh@gmail.com</span>
         </a>
-
         <a class="link-card" href="https://www.linkedin.com/in/yegorskikh" target="_blank" rel="noopener">
           <span class="icon" aria-hidden="true">💼</span>
           <span class="label">LinkedIn</span>
           <span class="hint">/in/yegorskikh</span>
         </a>
-
         <a class="link-card" href="https://steamcommunity.com/id/yekkee/" target="_blank" rel="noopener">
           <span class="icon" aria-hidden="true">🎮</span>
           <span class="label">Steam</span>
@@ -171,6 +145,24 @@
         </a>
       </div>
     </section>
+
+    <!-- Runner after CONTACTS — самая быстрая -->
+    <div class="runner" data-speed="4.5" aria-hidden="true">
+      <div class="lane ghosts">
+        <img src="assets/ghost.png" alt="" class="g">
+        <img src="assets/ghost.png" alt="" class="g" style="--delay:.7s">
+        <img src="assets/ghost.png" alt="" class="g" style="--delay:1.4s">
+        <img src="assets/ghost.png" alt="" class="g" style="--delay:2.1s">
+      </div>
+      <div class="lane pacmen">
+        <img src="assets/pacman.png" alt="" class="p">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:.5s">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.0s">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:1.5s">
+        <img src="assets/pacman.png" alt="" class="p" style="--delay:2.0s">
+      </div>
+    </div>
+
   </main>
 
   <footer class="site-footer">
@@ -180,36 +172,7 @@
   </footer>
 
   <script>
-    // год в футере
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // включаем анимации даже при prefers-reduced-motion
-    document.documentElement.classList.add('force-anim');
-
-    // Инициализация ВСЕХ дорожек
-    (async () => {
-      const tracks = document.querySelectorAll('.chase');
-      for (const track of tracks) {
-        const dur = parseFloat(track.dataset.dur || '6') || 6;
-        // пробрасываем длительность в CSS-переменную уровня блока
-        track.style.setProperty('--dur', dur + 's');
-
-        const imgs = track.querySelectorAll('img');
-        const pacmen = track.querySelectorAll('.pm');
-
-        // ждём декод изображений (важно для Chrome)
-        await Promise.all([...imgs].map(img => img.decode ? img.decode().catch(()=>{}) : Promise.resolve()));
-
-        // равномерные отрицательные задержки — едят по одному
-        const step = dur / (pacmen.length + 1);
-        pacmen.forEach((pm, i) => {
-          pm.style.animationDelay = `${-(i + 1) * step}s`;
-        });
-
-        // запуск анимации
-        track.classList.add('on');
-      }
-    })();
   </script>
 </body>
 </html>
