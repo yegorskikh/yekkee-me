@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g filter="url(#glow)">
+    <path d="M96,360 L416,360 L384,420 L320,360 L256,420 L192,360 L128,420 L96,360 Z" fill="#ff3cf7"/>
+    <path d="M96,200 C96,104 168,32 256,32 C344,32 416,104 416,200 L416,360 L96,360 Z" fill="#ff3cf7"/>
+    <g>
+      <circle cx="208" cy="208" r="44" fill="#fff"/>
+      <circle cx="304" cy="208" r="44" fill="#fff"/>
+      <circle cx="232" cy="220" r="22" fill="#1e3a8a"/>
+      <circle cx="328" cy="220" r="22" fill="#1e3a8a"/>
+    </g>
+  </g>
+</svg>

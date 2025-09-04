@@ -1,12 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- PWA manifest -->
+  <link rel="manifest" href="/manifest.json">
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Yegor — iOS Developer</title>
   <meta name="description" content="Personal page of Yegor (iOS Developer). GitHub, Telegram, Email, LinkedIn." />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/ghost.svg">
+  <link rel="icon" type="image/png" href="/assets/ghost-32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/ghost-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
+  <link rel="mask-icon" href="/assets/ghost-pinned.svg" color="#ff3cf7">
+  <meta name="theme-color" content="#0b0f14">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -32,35 +47,29 @@
         and user-friendly apps. I enjoy building modular projects with solid CI/CD pipelines 
         and a focus on testing and performance.
       </p>
-
-      <div class="pac-track" aria-hidden="true">
-        <div class="pacman">
-          <div class="pacmouth"></div>
-        </div>
-        <div class="dots">
-          <span></span><span></span><span></span><span></span><span></span>
-          <span></span><span></span><span></span><span></span><span></span>
-        </div>
+      
+      <div class="pac-banner">
+        <img src="assets/banner_ghost_pacmen.png" alt="Pac-Man ghost chasing Pac-Men banner" />
       </div>
     </section>
 
     <section id="about" class="section container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about">
-            <p>
-            I’m Yegor — an iOS developer focusing on modern app architecture, automation, and performance.
-            I’m passionate about testing — from writing solid unit tests to full UI test plans — 
-            and I keep up with today’s popular skills like reactive programming, modular project setup, 
-            and CI/CD best practices.
-            </p>
-            <ul class="bullets">
-            <li>Swift (UIKit, SwiftUI, Concurrency)</li>
-            <li>RxSwift / Combine</li>
-            <li>XcodeGen, SPM, Fastlane</li>
-            <li>CI/CD with GitHub & GitLab</li>
-            <li>Unit tests & UI tests (XCTest, test plans)</li>
+      <h2 class="section-title">About Me</h2>
+      <div class="about">
+        <p>
+          I’m Yegor — an iOS developer focusing on modern app architecture, automation, and performance.
+          I’m passionate about testing — from writing solid unit tests to full UI test plans — 
+          and I keep up with today’s popular skills like reactive programming, modular project setup, 
+          and CI/CD best practices.
+        </p>
+        <ul class="bullets">
+          <li>Swift (UIKit, SwiftUI, Concurrency)</li>
+          <li>RxSwift / Combine</li>
+          <li>XcodeGen, SPM, Fastlane</li>
+          <li>CI/CD with GitHub & GitLab</li>
+          <li>Unit tests & UI tests (XCTest, test plans)</li>
         </ul>
-        </div>
+      </div>
     </section>
 
     <section id="pc" class="section container">
@@ -85,33 +94,33 @@
       <h2 class="section-title">Contacts</h2>
       <div class="links-grid">
         <a class="link-card" href="https://github.com/yegorskikh" target="_blank" rel="noopener">
-            <span class="icon" aria-hidden="true">🐙</span>
-            <span class="label">GitHub</span>
-            <span class="hint">@yegorskikh</span>
+          <span class="icon" aria-hidden="true">🐙</span>
+          <span class="label">GitHub</span>
+          <span class="hint">@yegorskikh</span>
         </a>
 
         <a class="link-card" href="https://t.me/yegorskikh" target="_blank" rel="noopener">
-            <span class="icon" aria-hidden="true">💬</span>
-            <span class="label">Telegram</span>
-            <span class="hint">@yegorskikh</span>
+          <span class="icon" aria-hidden="true">💬</span>
+          <span class="label">Telegram</span>
+          <span class="hint">@yegorskikh</span>
         </a>
 
         <a class="link-card" href="mailto:yegorskikh@gmail.com" target="_blank" rel="noopener">
-            <span class="icon" aria-hidden="true">📧</span>
-            <span class="label">Email</span>
-            <span class="hint">yegorskikh@gmail.com</span>
+          <span class="icon" aria-hidden="true">📧</span>
+          <span class="label">Email</span>
+          <span class="hint">yegorskikh@gmail.com</span>
         </a>
 
         <a class="link-card" href="https://www.linkedin.com/in/yegorskikh" target="_blank" rel="noopener">
-            <span class="icon" aria-hidden="true">💼</span>
-            <span class="label">LinkedIn</span>
-            <span class="hint">/in/yegorskikh</span>
+          <span class="icon" aria-hidden="true">💼</span>
+          <span class="label">LinkedIn</span>
+          <span class="hint">/in/yegorskikh</span>
         </a>
 
         <a class="link-card" href="https://steamcommunity.com/id/yekkee/" target="_blank" rel="noopener">
-            <span class="icon" aria-hidden="true">🎮</span>
-            <span class="label">Steam</span>
-            <span class="hint">/id/yekkee</span>
+          <span class="icon" aria-hidden="true">🎮</span>
+          <span class="label">Steam</span>
+          <span class="hint">/id/yekkee</span>
         </a>
       </div>
     </section>
