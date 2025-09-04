@@ -145,8 +145,7 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // форсируем анимации: никаких reduce-motion-классов
-    document.documentElement.classList.remove('reduce-motion');
+    document.documentElement.classList.add('force-anim');
   </script>
 </body>
 </html>

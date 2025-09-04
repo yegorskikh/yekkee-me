@@ -179,39 +179,20 @@ body{
 }
 
 /* привидение едет слева направо за --chase-dur */
-.ghost-svg{
-  width:30px; height:30px;
+/* совместимость для PNG-иконок */
+.ghost { 
+  width: 30px; height: 30px;
   filter: drop-shadow(0 0 12px rgba(255,60,247,.55));
   animation: ghost-run var(--chase-dur) linear infinite;
 }
-@keyframes ghost-run{
-  from{ transform: translateX(-56px); }
-  to  { transform: translateX(calc(100% + 56px)); }
-}
 
-/* ряд пакманов справа */
-.prey{
-  position:absolute; left:56px; right:0;
-  display:flex; align-items:center;
-  gap: 30px; /* можно 26–34 — это «шаг» между пакманами */
-}
-
-/* каждый пакман живёт весь цикл, а перед исчезновением быстро гаснет */
-.pm-svg{
-  width:22px; height:22px;
+.pm { 
+  width: 22px; height: 22px;
   animation: pm-vanish var(--chase-dur) linear infinite;
 }
 
-/* Делаем так: 0–80% цикла пакман видим,
-   80–92% — плавное исчезновение, далее — скрыт */
-@keyframes pm-vanish{
-  0%, 80%   { opacity: 1; }
-  92%, 100% { opacity: 0; }
-}
-
-/* Момент исчезновения каждого задаём сдвигом (delay).
-   Подбирано под --chase-dur: 6s и gap ~30px. */
-.pm1 { animation-delay: 0.90s; }
+/* те же задержки, что и для .pm-svg */
+.pm1 { animation-delay: .90s; }
 .pm2 { animation-delay: 1.60s; }
 .pm3 { animation-delay: 2.30s; }
 .pm4 { animation-delay: 3.00s; }
@@ -220,6 +201,6 @@ body{
 .pm7 { animation-delay: 5.10s; }
 .pm8 { animation-delay: 5.80s; }
 
-/* на всякий случай форсим включение анимаций */
-.force-anim .ghost-svg { animation: ghost-run var(--chase-dur) linear infinite !important; }
-.force-anim .pm-svg    { animation: pm-vanish var(--chase-dur) linear infinite !important; }
+/* если где-то что-то глушит анимации — форсим */
+.force-anim .ghost { animation: ghost-run var(--chase-dur) linear infinite !important; }
+.force-anim .pm    { animation: pm-vanish var(--chase-dur) linear infinite !important; }
