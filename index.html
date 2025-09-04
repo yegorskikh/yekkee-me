@@ -43,25 +43,25 @@
         Yegor <span class="accent">iOS</span> Developer
       </h1>
       <p class="subtitle">
-        Hi! I’m Yegor — an iOS developer passionate about creating clean, reliable, 
-        and user-friendly apps. I enjoy building modular projects with solid CI/CD pipelines 
+        Hi! I’m Yegor — an iOS developer passionate about creating clean, reliable,
+        and user-friendly apps. I enjoy building modular projects with solid CI/CD pipelines
         and a focus on testing and performance.
       </p>
-      
-  <!-- Animated chase: ghost eats Pac-Men -->
-  <div class="chase" aria-hidden="true">
-    <img src="assets/ghost.png" alt="" class="ghost" width="32" height="32">
-    <div class="prey">
-        <img src="assets/pacman.png" class="pm pm1" alt="" width="22" height="22">
-        <img src="assets/pacman.png" class="pm pm2" alt="" width="22" height="22">
-        <img src="assets/pacman.png" class="pm pm3" alt="" width="22" height="22">
-        <img src="assets/pacman.png" class="pm pm4" alt="" width="22" height="22">
-        <img src="assets/pacman.png" class="pm pm5" alt="" width="22" height="22">
-        <img src="assets/pacman.png" class="pm pm6" alt="" width="22" height="22">
-        <img src="assets/pacman.png" class="pm pm7" alt="" width="22" height="22">
-        <img src="assets/pacman.png" class="pm pm8" alt="" width="22" height="22">
+
+      <!-- Animated chase: ghost eats Pac-Men -->
+      <div class="chase" aria-hidden="true">
+        <img src="assets/ghost.png" class="ghost" width="32" height="32" alt="" loading="eager" decoding="async" draggable="false" />
+        <div class="prey">
+          <img src="assets/pacman.png" class="pm pm1" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
+          <img src="assets/pacman.png" class="pm pm2" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
+          <img src="assets/pacman.png" class="pm pm3" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
+          <img src="assets/pacman.png" class="pm pm4" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
+          <img src="assets/pacman.png" class="pm pm5" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
+          <img src="assets/pacman.png" class="pm pm6" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
+          <img src="assets/pacman.png" class="pm pm7" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
+          <img src="assets/pacman.png" class="pm pm8" width="22" height="22" alt="" loading="eager" decoding="async" draggable="false" />
+        </div>
       </div>
-    </div>
     </section>
 
     <section id="about" class="section container">
@@ -69,8 +69,8 @@
       <div class="about">
         <p>
           I’m Yegor — an iOS developer focusing on modern app architecture, automation, and performance.
-          I’m passionate about testing — from writing solid unit tests to full UI test plans — 
-          and I keep up with today’s popular skills like reactive programming, modular project setup, 
+          I’m passionate about testing — from writing solid unit tests to full UI test plans —
+          and I keep up with today’s popular skills like reactive programming, modular project setup,
           and CI/CD best practices.
         </p>
         <ul class="bullets">
@@ -145,10 +145,8 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mq.matches) {
-      document.documentElement.classList.add('reduce-motion');
-    }
+    // форсируем анимации: никаких reduce-motion-классов
+    document.documentElement.classList.remove('reduce-motion');
   </script>
 </body>
 </html>
