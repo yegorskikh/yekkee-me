@@ -60,16 +60,9 @@
       padding: 8px 12px;
       font-size: 13px;
       line-height: 1;
-      color: var(--text);
+      color: var(--fg);
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .demo-video img {
-      display: block;
-      width: min(100%, 720px);
-      margin: 0 auto;
-      border-radius: 18px;
     }
 
     @media (max-width: 760px) {
@@ -154,7 +147,21 @@
 
     <!-- Project -->
     <section id="project" class="section container">
-      <h2 class="section-title">Текущий проект</h2>
+      <div class="project-heading">
+        <img
+          class="project-logo"
+          src="assets/logosmart.png"
+          alt="Логотип Smart-Trex"
+          loading="lazy"
+        />
+
+        <div class="project-heading-text">
+          <h2 class="section-title">Текущий проект</h2>
+          <p class="project-subtitle">
+            Smart-Trex — читалка для изучения языков через книги
+          </p>
+        </div>
+      </div>
 
       <div class="about">
         <p style="margin-top:0">
