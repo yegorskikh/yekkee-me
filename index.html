@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <!-- PWA manifest -->
   <link rel="manifest" href="/manifest.json">
 
   <meta charset="utf-8" />
@@ -9,11 +8,9 @@
   <title>Егор — iOS-разработчик</title>
   <meta name="description" content="Личная страница Егора, iOS-разработчика. Smart-Trex — SwiftUI EPUB-читалка для изучения языков через книги с переводом слов, словарём и собственным backend на LibreTranslate." />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- Favicons -->
   <link rel="icon" type="image/svg+xml" href="/assets/ghost.svg">
   <link rel="icon" type="image/png" href="/assets/ghost-32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/assets/ghost-192.png" sizes="192x192">
@@ -21,67 +18,9 @@
   <link rel="mask-icon" href="/assets/ghost-pinned.svg" color="#ff3cf7">
   <meta name="theme-color" content="#0b0f14">
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    .profile-hero {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .profile-photo {
-      width: 100%;
-      max-width: 280px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 28px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
-    }
-
-    .profile-text {
-      min-width: 0;
-    }
-
-    .profile-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
-
-    .profile-badge {
-      display: inline-flex;
-      align-items: center;
-      border-radius: 999px;
-      padding: 8px 12px;
-      font-size: 13px;
-      line-height: 1;
-      color: var(--fg);
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    @media (max-width: 760px) {
-      .profile-hero {
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-
-      .profile-photo {
-        max-width: 220px;
-        margin: 0 auto;
-      }
-
-      .profile-text {
-        text-align: left;
-      }
-    }
-  </style>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
@@ -97,7 +36,6 @@
   </header>
 
   <main id="top">
-    <!-- Hero -->
     <section class="hero container">
       <div class="profile-hero">
         <img
@@ -135,7 +73,6 @@
         </div>
       </div>
 
-      <!-- Simple pacman track (CSS only) -->
       <div class="pac-track" aria-hidden="true">
         <div class="pacman"><div class="pacmouth"></div></div>
         <div class="dots">
@@ -145,12 +82,11 @@
       </div>
     </section>
 
-    <!-- Project -->
     <section id="project" class="section container">
       <div class="project-heading">
         <img
           class="project-logo"
-          src="assets/logosmart.png"
+          src="assets/logosmart.jpg"
           alt="Логотип Smart-Trex"
           loading="lazy"
         />
@@ -177,7 +113,6 @@
           сохранил в словарь и позже повторил.
         </p>
 
-        <!-- App screenshot -->
         <div class="demo-video">
           <img
             src="assets/screen.jpg"
@@ -187,7 +122,6 @@
         </div>
       </div>
 
-      <!-- Product overview -->
       <div class="about" style="margin-top:16px">
         <h3 class="section-title" style="margin:0 0 10px;">Smart-Trex</h3>
 
@@ -208,7 +142,6 @@
         </p>
       </div>
 
-      <!-- Tech stack -->
       <div class="about" style="margin-top:16px">
         <h3 class="section-title" style="margin:0 0 10px;">Технологии</h3>
 
@@ -225,7 +158,6 @@
         </ul>
       </div>
 
-      <!-- Road to release -->
       <div class="about" style="margin-top:16px">
         <h3 class="section-title" style="margin:0 0 10px;">Путь к первому релизу</h3>
 
@@ -262,7 +194,6 @@
       </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="section container">
       <h2 class="section-title">Обо мне</h2>
       <div class="about">
@@ -296,7 +227,6 @@
       </div>
     </section>
 
-    <!-- PC -->
     <section id="pc" class="section container">
       <h2 class="section-title">Мой ПК</h2>
       <div class="about">
@@ -315,7 +245,6 @@
       </div>
     </section>
 
-    <!-- Contacts -->
     <section id="links" class="section container">
       <h2 class="section-title">Контакты</h2>
       <div class="links-grid">
@@ -359,10 +288,8 @@
   </footer>
 
   <script>
-    // Year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Respect reduced motion
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (mq.matches) {
       document.documentElement.classList.add('reduce-motion');

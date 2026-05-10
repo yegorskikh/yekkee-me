@@ -3,9 +3,9 @@
   --bg-2:#0f151d;
   --fg:#e8f0ff;
   --muted:#8aa0b6;
-  --accent:#38e8ff;      /* неоновый голубой */
-  --accent-2:#ff3cf7;    /* неоновый розовый */
-  --accent-3:#6dff3c;    /* неоновый зелёный */
+  --accent:#38e8ff;
+  --accent-2:#ff3cf7;
+  --accent-3:#6dff3c;
   --card:#121926;
   --border:#1e2a3a;
   --radius:20px;
@@ -106,44 +106,44 @@ body{
   gap:16px;
 }
 
-.profile-hero {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 32px;
-  align-items: center;
+.profile-hero{
+  display:grid;
+  grid-template-columns:280px 1fr;
+  gap:32px;
+  align-items:center;
 }
 
-.profile-photo {
-  width: 100%;
-  max-width: 280px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 28px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+.profile-photo{
+  width:100%;
+  max-width:280px;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
+  border-radius:28px;
+  border:1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:0 18px 60px rgba(0, 0, 0, 0.35);
 }
 
-.profile-text {
-  min-width: 0;
+.profile-text{
+  min-width:0;
 }
 
-.profile-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 18px;
+.profile-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
 }
 
-.profile-badge {
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  padding: 8px 12px;
-  font-size: 13px;
-  line-height: 1;
-  color: var(--fg);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.profile-badge{
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:13px;
+  line-height:1;
+  color:var(--fg);
+  background:rgba(255, 255, 255, 0.06);
+  border:1px solid rgba(255, 255, 255, 0.1);
 }
 
 .title{
@@ -164,7 +164,7 @@ body{
   max-width:70ch;
 }
 
-/* Чистый CSS трек Pac-Man */
+/* Pac-Man track */
 .pac-track{
   margin-top:10px;
   position:relative;
@@ -219,7 +219,7 @@ body{
 
 .reduce-motion .tetris-strip,
 .reduce-motion .pacman{
-  animation: none;
+  animation:none;
 }
 
 /* Sections / Cards */
@@ -260,48 +260,49 @@ body{
 }
 
 /* Smart-Trex project heading */
-.project-heading {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 18px;
+.project-heading{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:18px;
 }
 
-.project-logo {
-  width: 76px;
-  height: 76px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+.project-logo{
+  width:76px;
+  height:76px;
+  object-fit:cover;
+  border-radius:18px;
+  box-shadow:0 14px 40px rgba(0, 0, 0, 0.28);
+  border:1px solid rgba(255, 255, 255, 0.12);
 }
 
-.project-heading-text {
-  min-width: 0;
+.project-heading-text{
+  min-width:0;
 }
 
-.project-heading-text .section-title {
-  margin: 0;
+.project-heading-text .section-title{
+  margin:0;
 }
 
-.project-subtitle {
-  margin: 8px 0 0;
-  color: var(--muted);
+.project-subtitle{
+  margin:8px 0 0;
+  color:var(--muted);
 }
 
 /* App screenshot */
-.demo-video {
-  margin-top: 16px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
+.demo-video{
+  margin-top:16px;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
 }
 
-.demo-video img {
-  display: block;
-  width: 100%;
-  max-width: 1100px;
-  margin: 24px auto 0;
-  border-radius: 18px;
+.demo-video img{
+  display:block;
+  width:100%;
+  max-width:1100px;
+  margin:24px auto 0;
+  border-radius:18px;
 }
 
 /* Contacts */
@@ -370,18 +371,18 @@ body{
 
 /* Adaptive */
 @media (max-width:760px){
-  .profile-hero {
-    grid-template-columns: 1fr;
-    gap: 22px;
+  .profile-hero{
+    grid-template-columns:1fr;
+    gap:22px;
   }
 
-  .profile-photo {
-    max-width: 220px;
-    margin: 0 auto;
+  .profile-photo{
+    max-width:220px;
+    margin:0 auto;
   }
 
-  .profile-text {
-    text-align: left;
+  .profile-text{
+    text-align:left;
   }
 }
 
@@ -394,14 +395,14 @@ body{
     display:none;
   }
 
-  .project-heading {
-    align-items: flex-start;
+  .project-heading{
+    align-items:flex-start;
   }
 
-  .project-logo {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
+  .project-logo{
+    width:64px;
+    height:64px;
+    border-radius:16px;
   }
 }
 
