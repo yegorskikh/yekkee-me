@@ -18,7 +18,7 @@
   <link rel="mask-icon" href="/assets/ghost-pinned.svg" color="#ff3cf7">
   <meta name="theme-color" content="#0b0f14">
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 
 <body>
@@ -26,7 +26,7 @@
     <div class="container">
       <a class="brand" href="#top" aria-label="Егор — iOS-разработчик">YEKKEE . ME</a>
       <nav class="nav">
-        <a href="#about">Обо мне</a>
+        <a href="#about">Стек</a>
         <a href="#project">Проект</a>
         <a href="#pc">Мой ПК</a>
         <a href="#links">Контакты</a>
@@ -51,24 +51,28 @@
           </h1>
 
           <p class="subtitle">
-            Привет! Я Егор — iOS-разработчик с продуктовым опытом в ERP, POS, retail
-            и fintech-проектах. Делаю мобильные приложения на Swift, работаю с UIKit,
-            SwiftUI, realtime-сценариями, offline-first логикой, локальным хранением данных,
-            CI/CD и тестированием.
+            Я Егор — iOS-разработчик с опытом продуктовой мобильной разработки в ERP,
+            POS, retail и fintech-направлениях. Работал над кассовым приложением для
+            розничной торговли, основным мобильным ERP-приложением МойСклад,
+            кроссплатформенными библиотеками и iOS-приложением для крипто-трейдинга.
           </p>
 
           <p class="subtitle" style="margin-top:14px;">
-            Сейчас развиваю Smart-Trex — EPUB-читалку для изучения языков через книги
-            с переводом слов, словарём и собственным backend.
+            В проектах занимался не только интерфейсами, но и бизнес-логикой,
+            realtime-сценариями, offline-first подходом, локальным хранением данных,
+            интеграциями с внешними системами, архитектурой, автоматизацией сборок
+            и тестированием. Мне важно доводить фичу до конца: от UX и состояния экрана
+            до сетевого слоя, хранения, CI/CD и стабильного релиза.
           </p>
 
-          <div class="profile-badges" aria-label="Основные навыки">
+          <div class="profile-badges" aria-label="Основные направления">
             <span class="profile-badge">Swift</span>
             <span class="profile-badge">UIKit</span>
             <span class="profile-badge">SwiftUI</span>
-            <span class="profile-badge">MVVM</span>
-            <span class="profile-badge">CI/CD</span>
             <span class="profile-badge">Offline-first</span>
+            <span class="profile-badge">Retail / POS</span>
+            <span class="profile-badge">Fintech</span>
+            <span class="profile-badge">CI/CD</span>
           </div>
         </div>
       </div>
@@ -79,6 +83,25 @@
           <span></span><span></span><span></span><span></span><span></span>
           <span></span><span></span><span></span><span></span><span></span>
         </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2 class="section-title">Стек и опыт</h2>
+
+      <div class="about">
+        <ul class="bullets">
+          <li><strong>iOS:</strong> Swift, UIKit, SwiftUI, Swift Concurrency, RxSwift, Combine</li>
+          <li><strong>Архитектура:</strong> MVVM, Use Cases, Repository layer, Coordinator-style navigation, Clean Architecture</li>
+          <li><strong>Хранение:</strong> Core Data, Realm, local-first и offline-first сценарии</li>
+          <li><strong>Retail / ERP:</strong> POS-сценарии, возвраты, оплаты, бонусы, фискальная логика, маркировка</li>
+          <li><strong>Fintech:</strong> realtime trading UI, WebSocket-сервисы, REST API, PnL, push-уведомления</li>
+          <li><strong>Интеграции:</strong> эквайринг, платёжные терминалы, Честный Знак / ТС ПИоТ, push-навигация</li>
+          <li><strong>Инструменты:</strong> Tuist, XcodeGen, SPM, CocoaPods, Fastlane</li>
+          <li><strong>CI/CD:</strong> GitLab CI, Allure-отчёты, test plans, автоматизация сборок</li>
+          <li><strong>Кроссплатформа:</strong> опыт с Kotlin Multiplatform библиотеками для iOS / Android / Desktop</li>
+          <li><strong>Тестирование:</strong> XCTest, UI-тесты, Page Object, RxTest / RxBlocking</li>
+        </ul>
       </div>
     </section>
 
@@ -143,7 +166,7 @@
       </div>
 
       <div class="about" style="margin-top:16px">
-        <h3 class="section-title" style="margin:0 0 10px;">Технологии</h3>
+        <h3 class="section-title" style="margin:0 0 10px;">Технологии проекта</h3>
 
         <ul class="bullets">
           <li><strong>UI:</strong> SwiftUI — декларативные экраны, адаптивная вёрстка, переиспользуемые компоненты</li>
@@ -191,39 +214,6 @@
         <p style="margin-top:10px; color:var(--muted)">
           Текущий фокус: сделать сценарий чтение → перевод → словарь быстрым, понятным и надёжным.
         </p>
-      </div>
-    </section>
-
-    <section id="about" class="section container">
-      <h2 class="section-title">Обо мне</h2>
-      <div class="about">
-        <p>
-          Я Егор — iOS-разработчик с опытом продуктовой мобильной разработки в ERP,
-          POS, retail и fintech-направлениях. Работал над кассовым приложением для
-          розничной торговли, основным мобильным ERP-приложением МойСклад,
-          кроссплатформенными библиотеками и iOS-приложением для крипто-трейдинга.
-        </p>
-
-        <p>
-          В проектах занимался не только интерфейсами, но и бизнес-логикой,
-          realtime-сценариями, offline-first подходом, локальным хранением данных,
-          интеграциями с внешними системами, архитектурой, автоматизацией сборок
-          и тестированием. Мне важно доводить фичу до конца: от UX и состояния экрана
-          до сетевого слоя, хранения, CI/CD и стабильного релиза.
-        </p>
-
-        <ul class="bullets">
-          <li><strong>iOS:</strong> Swift, UIKit, SwiftUI, Swift Concurrency, RxSwift, Combine</li>
-          <li><strong>Архитектура:</strong> MVVM, Use Cases, Repository layer, Coordinator-style navigation, Clean Architecture</li>
-          <li><strong>Хранение:</strong> Core Data, Realm, local-first и offline-first сценарии</li>
-          <li><strong>Retail / ERP:</strong> POS-сценарии, возвраты, оплаты, бонусы, фискальная логика, маркировка</li>
-          <li><strong>Fintech:</strong> realtime trading UI, WebSocket-сервисы, REST API, PnL, push-уведомления</li>
-          <li><strong>Интеграции:</strong> эквайринг, платёжные терминалы, Честный Знак / ТС ПИоТ, push-навигация</li>
-          <li><strong>Инструменты:</strong> Tuist, XcodeGen, SPM, CocoaPods, Fastlane</li>
-          <li><strong>CI/CD:</strong> GitLab CI, Allure-отчёты, test plans, автоматизация сборок</li>
-          <li><strong>Кроссплатформа:</strong> опыт с Kotlin Multiplatform библиотеками для iOS/Android/Desktop</li>
-          <li><strong>Тестирование:</strong> XCTest, UI-тесты, Page Object, RxTest/RxBlocking</li>
-        </ul>
       </div>
     </section>
 
