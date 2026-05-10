@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <!-- PWA manifest -->
   <link rel="manifest" href="/manifest.json">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Yegor — iOS Developer</title>
-  <meta name="description" content="Personal page of Yegor (iOS Developer). GitHub, Telegram, Email, LinkedIn." />
+  <title>Егор — iOS-разработчик</title>
+  <meta name="description" content="Личная страница Егора, iOS-разработчика. Smart-Trex — SwiftUI EPUB-читалка для изучения языков через книги с переводом слов, словарём и собственным backend на LibreTranslate." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,12 +27,12 @@
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="#top" aria-label="Yegor — iOS Developer">YEKKEE . ME</a>
+      <a class="brand" href="#top" aria-label="Егор — iOS-разработчик">YEKKEE . ME</a>
       <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#project">Project</a>
-        <a href="#pc">My PC</a>
-        <a href="#links">Contacts</a>
+        <a href="#about">Обо мне</a>
+        <a href="#project">Проект</a>
+        <a href="#pc">Мой ПК</a>
+        <a href="#links">Контакты</a>
       </nav>
     </div>
     <div class="tetris-strip" aria-hidden="true"></div>
@@ -42,12 +42,14 @@
     <!-- Hero -->
     <section class="hero container">
       <h1 class="title">
-        Yegor <span class="accent">iOS</span> Developer
+        Егор <span class="accent">iOS</span> разработчик
       </h1>
       <p class="subtitle">
-        Hi! I’m Yegor — an iOS developer passionate about creating clean, reliable,
-        and user-friendly apps. I enjoy building modular projects with solid CI/CD pipelines
-        and a focus on testing and performance.
+        Привет! Я Егор — iOS-разработчик с продуктовым опытом в ERP, POS, retail
+        и fintech-проектах. Делаю мобильные приложения на Swift, работаю с UIKit,
+        SwiftUI, realtime-сценариями, offline-first логикой, локальным хранением данных,
+        CI/CD и тестированием. Сейчас развиваю Smart-Trex — EPUB-читалку для изучения
+        языков через книги с переводом слов, словарём и собственным backend.
       </p>
 
       <!-- Simple pacman track (CSS only) -->
@@ -62,96 +64,163 @@
 
     <!-- Project -->
     <section id="project" class="section container">
-      <h2 class="section-title">Current Project</h2>
+      <h2 class="section-title">Текущий проект</h2>
 
       <div class="about">
         <p style="margin-top:0">
-          I’m building an app for reading books in English with <strong>inline word translation</strong>.
-          Translated words are saved automatically to grow your personal vocabulary. The project is in progress —
-          here’s a short demo:
+          Я разрабатываю <strong>Smart-Trex</strong> — EPUB-читалку на SwiftUI для изучения
+          языков через книги. Это pet-проект, в котором я собираю полноценный продуктовый
+          цикл: импорт и отображение EPUB, перевод слов, локальное хранение, словарь,
+          backend для переводов, HTTPS-инфраструктуру и тестируемую архитектуру.
         </p>
 
-        <!-- Video demo -->
+        <p>
+          Идея приложения — не заменить обычный переводчик, а помочь читать на иностранном
+          языке без постоянного переключения контекста: нажал на слово, получил перевод,
+          сохранил в словарь и позже повторил.
+        </p>
+
+        <!-- App screenshot -->
         <div class="demo-video">
-          <video controls preload="metadata" playsinline>
-            <source src="assets/reading-demo.mp4" type="video/mp4">
-            Your browser doesn’t support the video tag.
-          </video>
+          <img
+            src="assets/screen.png"
+            alt="Скриншот приложения Smart-Trex"
+            loading="lazy"
+          />
         </div>
       </div>
 
-      <!-- Road to MVP (flat, no nested cards) -->
+      <!-- Product overview -->
       <div class="about" style="margin-top:16px">
-        <h3 class="section-title" style="margin:0 0 10px;">Road to MVP</h3>
+        <h3 class="section-title" style="margin:0 0 10px;">Smart-Trex</h3>
+
         <p style="margin:0 0 10px;">
-          Foundation is ready. Time to define the MVP flow and ship the first build.
-          Stack and scope are intentionally small and focused:
+          Smart-Trex — это не просто переводчик. Это приложение для тех, кто хочет
+          читать книги на иностранном языке и постепенно расширять словарный запас.
         </p>
 
-        <p style="margin:12px 0 6px;"><strong>Tech stack</strong></p>
         <ul class="bullets">
-          <li><strong>UI:</strong> SwiftUI — lightweight views, adaptive layout, smooth animations</li>
-          <li><strong>Reactive:</strong> Combine — streamlined bindings, debounced lookups, cancellation</li>
-          <li><strong>Architecture:</strong> MVVM — testable, modular, preview-friendly</li>
-          <li><strong>Storage:</strong> Core Data or SwiftData — lean models, predictable migrations</li>
-        </ul>
-
-        <p style="margin:12px 0 6px;"><strong>MVP scope</strong></p>
-        <ul class="bullets">
-          <li><strong>Settings tab:</strong> font size slider, clear database (with confirmation)</li>
-          <li><strong>Books:</strong> open local books and keep them in a library (cover, title, progress)</li>
-          <li><strong>Reader basics:</strong> comfortable pagination, night mode, quick navigation</li>
-          <li><strong>Inline translation:</strong> tap a word → instant translation overlay</li>
-          <li><strong>Vocabulary:</strong> auto-save translated words for later review</li>
+          <li><strong>Читать:</strong> импорт EPUB-книг и хранение их в локальной библиотеке</li>
+          <li><strong>Переводить:</strong> перевод слов по нажатию и отдельный экран переводчика</li>
+          <li><strong>Запоминать:</strong> сохранение переводов и формирование личного словаря</li>
+          <li><strong>Повторять:</strong> подготовка слов к будущему режиму повторения</li>
         </ul>
 
         <p style="margin-top:10px; color:var(--muted)">
-          Next steps: wire up the translation pipeline, polish the reading experience, and push a TestFlight build.
+          Главный сценарий продукта: читать → переводить → сохранять → повторять.
+        </p>
+      </div>
+
+      <!-- Tech stack -->
+      <div class="about" style="margin-top:16px">
+        <h3 class="section-title" style="margin:0 0 10px;">Технологии</h3>
+
+        <ul class="bullets">
+          <li><strong>UI:</strong> SwiftUI — декларативные экраны, адаптивная вёрстка, переиспользуемые компоненты</li>
+          <li><strong>Reader:</strong> WKWebView — отображение EPUB-глав и обработка нажатия на слова</li>
+          <li><strong>Архитектура:</strong> MVVM + Use Cases + Repository layer</li>
+          <li><strong>Асинхронность:</strong> async/await — сеть, парсинг и перевод</li>
+          <li><strong>Хранение:</strong> Core Data — книги, прогресс чтения, история и кэш переводов</li>
+          <li><strong>Backend:</strong> Node.js + Express — API-прокси, rate limit, валидация запросов</li>
+          <li><strong>Перевод:</strong> self-hosted LibreTranslate за Nginx и HTTPS</li>
+          <li><strong>Инфраструктура:</strong> Docker Compose, Nginx, Let’s Encrypt, Cloudflare DNS</li>
+          <li><strong>Тесты:</strong> unit-тесты для парсинга, репозиториев, use case-ов и view model-ей</li>
+        </ul>
+      </div>
+
+      <!-- Road to release -->
+      <div class="about" style="margin-top:16px">
+        <h3 class="section-title" style="margin:0 0 10px;">Путь к первому релизу</h3>
+
+        <p style="margin:0 0 10px;">
+          Техническая основа уже готова. Сейчас фокус — довести основной пользовательский
+          сценарий до удобного состояния и подготовить первую сборку для TestFlight.
+        </p>
+
+        <p style="margin:12px 0 6px;"><strong>Уже реализовано</strong></p>
+        <ul class="bullets">
+          <li><strong>Библиотека книг:</strong> импорт EPUB, список книг, обложки, метаданные и прогресс чтения</li>
+          <li><strong>Reader:</strong> отображение глав, экран чтения и базовый reading experience</li>
+          <li><strong>Inline-перевод:</strong> нажатие на слово и получение перевода через app flow</li>
+          <li><strong>Экран переводчика:</strong> выбор языков, смена направления, результат, копирование и повтор</li>
+          <li><strong>Backend:</strong> рабочее API для перевода на <span class="mono">api.yekkee.me</span></li>
+          <li><strong>Локальное хранение:</strong> книги, история переводов и кэш переведённых слов</li>
+          <li><strong>Тесты:</strong> покрытие важной логики парсинга и бизнес-слоя</li>
+        </ul>
+
+        <p style="margin:12px 0 6px;"><strong>Следующие задачи</strong></p>
+        <ul class="bullets">
+          <li><strong>Корректный кэш переводов:</strong> ключ кэша должен учитывать текст, source и target</li>
+          <li><strong>Vocabulary:</strong> отделить словарь пользователя от технического кэша переводов</li>
+          <li><strong>Add to Vocabulary:</strong> сохранять в словарь только те слова, которые пользователь выбрал сам</li>
+          <li><strong>Review mode:</strong> простой режим карточек для повторения сохранённых слов</li>
+          <li><strong>Перевод фраз:</strong> переводить не только отдельные слова, но и выделенные фрагменты</li>
+          <li><strong>Настройки чтения:</strong> размер шрифта, тема, исходный язык и язык перевода</li>
+          <li><strong>App Store polish:</strong> onboarding, скриншоты, privacy policy и TestFlight-сборка</li>
+        </ul>
+
+        <p style="margin-top:10px; color:var(--muted)">
+          Текущий фокус: сделать сценарий чтение → перевод → словарь быстрым, понятным и надёжным.
         </p>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section container">
-      <h2 class="section-title">About Me</h2>
+      <h2 class="section-title">Обо мне</h2>
       <div class="about">
         <p>
-          I’m Yegor — an iOS developer focusing on modern app architecture, automation, and performance.
-          I care about testing — from solid unit tests to full UI test plans — and keep up with today’s
-          popular practices like reactive programming, modular project setup, and CI/CD best practices.
+          Я Егор — iOS-разработчик с опытом продуктовой мобильной разработки в ERP,
+          POS, retail и fintech-направлениях. Работал над кассовым приложением для
+          розничной торговли, основным мобильным ERP-приложением МойСклад,
+          кроссплатформенными библиотеками и iOS-приложением для крипто-трейдинга.
         </p>
+
+        <p>
+          В проектах занимался не только интерфейсами, но и бизнес-логикой,
+          realtime-сценариями, offline-first подходом, локальным хранением данных,
+          интеграциями с внешними системами, архитектурой, автоматизацией сборок
+          и тестированием. Мне важно доводить фичу до конца: от UX и состояния экрана
+          до сетевого слоя, хранения, CI/CD и стабильного релиза.
+        </p>
+
         <ul class="bullets">
-          <li>Swift (UIKit, SwiftUI, Concurrency)</li>
-          <li>RxSwift / Combine</li>
-          <li>XcodeGen, SPM, Fastlane</li>
-          <li>CI/CD with GitHub &amp; GitLab</li>
-          <li>Unit tests &amp; UI tests (XCTest, test plans)</li>
+          <li><strong>iOS:</strong> Swift, UIKit, SwiftUI, Swift Concurrency, RxSwift, Combine</li>
+          <li><strong>Архитектура:</strong> MVVM, Use Cases, Repository layer, Coordinator-style navigation, Clean Architecture</li>
+          <li><strong>Хранение:</strong> Core Data, Realm, local-first и offline-first сценарии</li>
+          <li><strong>Retail / ERP:</strong> POS-сценарии, возвраты, оплаты, бонусы, фискальная логика, маркировка</li>
+          <li><strong>Fintech:</strong> realtime trading UI, WebSocket-сервисы, REST API, PnL, push-уведомления</li>
+          <li><strong>Интеграции:</strong> эквайринг, платёжные терминалы, Честный Знак / ТС ПИоТ, push-навигация</li>
+          <li><strong>Инструменты:</strong> Tuist, XcodeGen, SPM, CocoaPods, Fastlane</li>
+          <li><strong>CI/CD:</strong> GitLab CI, Allure-отчёты, test plans, автоматизация сборок</li>
+          <li><strong>Кроссплатформа:</strong> опыт с Kotlin Multiplatform библиотеками для iOS/Android/Desktop</li>
+          <li><strong>Тестирование:</strong> XCTest, UI-тесты, Page Object, RxTest/RxBlocking</li>
         </ul>
       </div>
     </section>
 
     <!-- PC -->
     <section id="pc" class="section container">
-      <h2 class="section-title">My PC Build</h2>
+      <h2 class="section-title">Мой ПК</h2>
       <div class="about">
         <ul class="bullets">
           <li><strong>CPU:</strong> AMD Ryzen 7 7800X3D</li>
           <li><strong>GPU:</strong> Palit GeForce RTX 5080 GamingPro</li>
-          <li><strong>Motherboard:</strong> ASUS ROG STRIX B650E-E Gaming Wi-Fi</li>
+          <li><strong>Материнская плата:</strong> ASUS ROG STRIX B650E-E Gaming Wi-Fi</li>
           <li><strong>RAM:</strong> 32 GB DDR5-6000 CL36 Kingston FURY Beast RGB (2×16 GB)</li>
-          <li><strong>Storage:</strong> Samsung 990 PRO 4 TB (M.2 NVMe) + Samsung 970 EVO Plus 1 TB</li>
-          <li><strong>Cooling:</strong> DeepCool LS520 (240 mm AIO)</li>
-          <li><strong>Case:</strong> ARDOR GAMING C305 V2 (glass front &amp; side, black)</li>
-          <li><strong>Fans:</strong> 7× ID-COOLING TF Series [TF-12025-ARGB] with hub</li>
-          <li><strong>PSU:</strong> Seasonic Focus GX-850 (850W, 80+ Gold)</li>
-          <li><strong>Monitor:</strong> 32" Samsung Odyssey OLED G8 G81SF S32FG810SI</li>
+          <li><strong>Хранилище:</strong> Samsung 990 PRO 4 TB (M.2 NVMe) + Samsung 970 EVO Plus 1 TB</li>
+          <li><strong>Охлаждение:</strong> DeepCool LS520 (240 mm AIO)</li>
+          <li><strong>Корпус:</strong> ARDOR GAMING C305 V2, стеклянный фронт и боковая панель</li>
+          <li><strong>Вентиляторы:</strong> 7× ID-COOLING TF Series [TF-12025-ARGB] через хаб</li>
+          <li><strong>Блок питания:</strong> Seasonic Focus GX-850, 850W, 80+ Gold</li>
+          <li><strong>Монитор:</strong> 32" Samsung Odyssey OLED G8 G81SF S32FG810SI</li>
         </ul>
       </div>
     </section>
 
     <!-- Contacts -->
     <section id="links" class="section container">
-      <h2 class="section-title">Contacts</h2>
+      <h2 class="section-title">Контакты</h2>
       <div class="links-grid">
         <a class="link-card" href="https://github.com/yegorskikh" target="_blank" rel="noopener">
           <span class="icon" aria-hidden="true">🐙</span>
@@ -188,7 +257,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Yegor · <span class="mono">yekkee.me</span></p>
+      <p>© <span id="year"></span> Егор · <span class="mono">yekkee.me</span></p>
     </div>
   </footer>
 
