@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Егор — iOS-разработчик</title>
-  <meta name="description" content="Личная страница Егора, iOS-разработчика. Smart-Trex — SwiftUI EPUB-читалка для изучения языков через книги с переводом слов, словарём и собственным backend на LibreTranslate." />
+  <meta name="description" content="Егор Горских — iOS-разработчик с 5+ годами коммерческого опыта. Swift, SwiftUI, UIKit, продуктовая разработка, дизайн-системы, POS/ERP, fintech и Kotlin Multiplatform." />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
@@ -26,9 +26,9 @@
     <div class="container">
       <a class="brand" href="#top" aria-label="Егор — iOS-разработчик">YEKKEE . ME</a>
       <nav class="nav">
-        <a href="#about">Стек</a>
-        <a href="#project">Проект</a>
-        <a href="#pc">Мой ПК</a>
+        <a href="#about">Обо мне</a>
+        <a href="#experience">Опыт</a>
+        <a href="#project">Smart-Trex</a>
         <a href="#links">Контакты</a>
       </nav>
     </div>
@@ -47,32 +47,32 @@
 
         <div class="profile-text">
           <h1 class="title">
-            Егор <span class="accent">iOS</span> разработчик
+            Егор Горских · <span class="accent">iOS</span> разработчик
           </h1>
 
           <p class="subtitle">
-            Я Егор — iOS-разработчик с опытом продуктовой мобильной разработки в ERP,
-            POS, retail и fintech-направлениях. Работал над кассовым приложением для
-            розничной торговли, основным мобильным ERP-приложением МойСклад,
-            кроссплатформенными библиотеками и iOS-приложением для крипто-трейдинга.
+            iOS-разработчик с 5+ годами коммерческого опыта в продуктовой разработке.
+            Сейчас работаю в команде дизайн-системы Туту: разрабатываю переиспользуемые
+            SwiftUI-компоненты, проектирую их публичные API и участвую в развитии
+            инфраструктуры дизайн-токенов.
           </p>
 
           <p class="subtitle" style="margin-top:14px;">
-            В проектах занимался не только интерфейсами, но и бизнес-логикой,
-            realtime-сценариями, offline-first подходом, локальным хранением данных,
-            интеграциями с внешними системами, архитектурой, автоматизацией сборок
-            и тестированием. Мне важно доводить фичу до конца: от UX и состояния экрана
-            до сетевого слоя, хранения, CI/CD и стабильного релиза.
+            До этого четыре года развивал ERP- и POS-приложения МойСклад и
+            кроссплатформенные KMP-библиотеки для iOS, Android и Desktop. Работал со
+            сложной бизнес-логикой и интеграциями: платежами и эквайрингом, фискализацией,
+            маркировкой «Честный Знак» / ТС ПИоТ, кассовым оборудованием, realtime-данными,
+            локальным хранением и CI/CD.
           </p>
 
-          <div class="profile-badges" aria-label="Основные направления">
+          <div class="profile-badges" aria-label="Основные технологии">
             <span class="profile-badge">Swift</span>
-            <span class="profile-badge">UIKit</span>
             <span class="profile-badge">SwiftUI</span>
-            <span class="profile-badge">Offline-first</span>
-            <span class="profile-badge">Retail / POS</span>
-            <span class="profile-badge">Fintech</span>
-            <span class="profile-badge">CI/CD</span>
+            <span class="profile-badge">UIKit</span>
+            <span class="profile-badge">Swift Concurrency</span>
+            <span class="profile-badge">Kotlin Multiplatform</span>
+            <span class="profile-badge">Tuist</span>
+            <span class="profile-badge">XCTest</span>
           </div>
         </div>
       </div>
@@ -87,20 +87,61 @@
     </section>
 
     <section id="about" class="section container">
-      <h2 class="section-title">Стек и опыт</h2>
+      <h2 class="section-title">Обо мне</h2>
 
       <div class="about">
+        <p style="margin-top:0">
+          Основной фокус — нативная iOS-разработка на <strong>Swift, SwiftUI и UIKit</strong>.
+          Мне интересны задачи, где нужно не просто сверстать экран, а спроектировать API,
+          разобраться в бизнес-логике, данных и интеграциях и довести решение до рабочего продукта.
+        </p>
+
+        <p>
+          Работал с MVVM, Coordinator, Clean Architecture и Redux/ReSwift, RxSwift, Combine
+          и Swift Concurrency. В проектах использовал Core Data и Realm, SPM и CocoaPods,
+          Tuist и XcodeGen, Fastlane и GitLab CI. Пишу unit-, snapshot- и UI-тесты.
+        </p>
+
+        <p style="margin-bottom:0">
+          Помимо основной работы развиваю собственное iOS-приложение Smart-Trex — это мой
+          полигон для архитектуры, SwiftUI, WKWebView, EPUB, persistence, backend API и продуктовых решений.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="section container">
+      <h2 class="section-title">Коммерческий опыт</h2>
+
+      <div class="about">
+        <h3 class="section-title" style="margin:0 0 8px;">Туту · iOS-разработчик</h3>
+        <p style="margin:0 0 10px; color:var(--muted)">Июнь 2026 — настоящее время</p>
         <ul class="bullets">
-          <li><strong>iOS:</strong> Swift, UIKit, SwiftUI, Swift Concurrency, RxSwift, Combine</li>
-          <li><strong>Архитектура:</strong> MVVM, Use Cases, Repository layer, Coordinator-style navigation, Clean Architecture</li>
-          <li><strong>Хранение:</strong> Core Data, Realm, local-first и offline-first сценарии</li>
-          <li><strong>Retail / ERP:</strong> POS-сценарии, возвраты, оплаты, бонусы, фискальная логика, маркировка</li>
-          <li><strong>Fintech:</strong> realtime trading UI, WebSocket-сервисы, REST API, PnL, push-уведомления</li>
-          <li><strong>Интеграции:</strong> эквайринг, платёжные терминалы, Честный Знак / ТС ПИоТ, push-навигация</li>
-          <li><strong>Инструменты:</strong> Tuist, XcodeGen, SPM, CocoaPods, Fastlane</li>
-          <li><strong>CI/CD:</strong> GitLab CI, Allure-отчёты, test plans, автоматизация сборок</li>
-          <li><strong>Кроссплатформа:</strong> опыт с Kotlin Multiplatform библиотеками для iOS / Android / Desktop</li>
-          <li><strong>Тестирование:</strong> XCTest, UI-тесты, Page Object, RxTest / RxBlocking</li>
+          <li>Разрабатываю переиспользуемые SwiftUI-компоненты корпоративной дизайн-системы в крупной модульной кодовой базе.</li>
+          <li>Проектирую публичные API компонентов, модели состояния и стилевые конфигурации для продуктовых команд.</li>
+          <li>Участвую в архитектурных решениях, code review и синхронизации поведения компонентов между iOS, Android и Web.</li>
+          <li>Работаю с пайплайном дизайн-токенов из Figma и покрываю компоненты snapshot- и unit-тестами.</li>
+        </ul>
+      </div>
+
+      <div class="about" style="margin-top:16px">
+        <h3 class="section-title" style="margin:0 0 8px;">МойСклад · iOS-разработчик</h3>
+        <p style="margin:0 0 10px; color:var(--muted)">Май 2022 — Апрель 2026</p>
+        <ul class="bullets">
+          <li>Развивал POS-приложение для розницы и основное мобильное ERP-приложение.</li>
+          <li>Реализовывал оплаты, возвраты, бонусы, QR- и смешанную оплату, фискальные сценарии и маркировку.</li>
+          <li>Интегрировал кассовое и платёжное оборудование, «Честный Знак» / ТС ПИоТ и сложные offline-сценарии.</li>
+          <li>Разрабатывал KMP-библиотеки для интеграции платёжных терминалов и парсинга маркировочных кодов на iOS / Android / Desktop.</li>
+          <li>Участвовал в развитии инфраструктуры: Tuist, XcodeGen, Fastlane, GitLab CI, test plans и Allure.</li>
+        </ul>
+      </div>
+
+      <div class="about" style="margin-top:16px">
+        <h3 class="section-title" style="margin:0 0 8px;">xCritical Software · iOS-разработчик</h3>
+        <p style="margin:0 0 10px; color:var(--muted)">Август 2021 — Апрель 2022</p>
+        <ul class="bullets">
+          <li>Работал над iOS-приложением для крипто-трейдинга на UIKit и RxSwift.</li>
+          <li>Разработал REST-сетевой слой и ключевые пользовательские сценарии, включая открытие ордера и экран баланса.</li>
+          <li>Работал с WebSocket, realtime-обновлениями торговых данных, PnL и push-уведомлениями.</li>
         </ul>
       </div>
     </section>
@@ -115,7 +156,7 @@
         />
 
         <div class="project-heading-text">
-          <h2 class="section-title">Текущий проект</h2>
+          <h2 class="section-title">Pet-project</h2>
           <p class="project-subtitle">
             Smart-Trex — читалка для изучения языков через книги
           </p>
@@ -124,10 +165,10 @@
 
       <div class="about">
         <p style="margin-top:0">
-          Я разрабатываю <strong>Smart-Trex</strong> — EPUB-читалку на SwiftUI для изучения
-          языков через книги. Это pet-проект, в котором я собираю полноценный продуктовый
-          цикл: импорт и отображение EPUB, перевод слов, локальное хранение, словарь,
-          backend для переводов, HTTPS-инфраструктуру и тестируемую архитектуру.
+          Я разрабатываю <strong>Smart-Trex</strong> — iOS-приложение для чтения книг на
+          иностранных языках. Самостоятельно проектирую архитектуру и весь продуктовый цикл:
+          EPUB reader с пагинацией и навигацией, перевод слов и предложений, словарь и систему
+          повторения, persistence, backend API и инфраструктуру.
         </p>
 
         <p>
@@ -154,10 +195,10 @@
         </p>
 
         <ul class="bullets">
-          <li><strong>Читать:</strong> импорт EPUB-книг и хранение их в локальной библиотеке</li>
-          <li><strong>Переводить:</strong> перевод слов по нажатию и отдельный экран переводчика</li>
-          <li><strong>Запоминать:</strong> сохранение переводов и формирование личного словаря</li>
-          <li><strong>Повторять:</strong> подготовка слов к будущему режиму повторения</li>
+          <li><strong>Reader:</strong> EPUB, пагинация, оглавление, внутренние ссылки и восстановление позиции чтения</li>
+          <li><strong>Перевод:</strong> перевод слов и предложений прямо в контексте книги</li>
+          <li><strong>Vocabulary:</strong> личный словарь, привязка слов к книгам и контекстам</li>
+          <li><strong>Review:</strong> система повторения и отслеживание прогресса изучения слов</li>
         </ul>
 
         <p style="margin-top:10px; color:var(--muted)">
@@ -173,7 +214,7 @@
           <li><strong>Reader:</strong> WKWebView — отображение EPUB-глав и обработка нажатия на слова</li>
           <li><strong>Архитектура:</strong> MVVM + Use Cases + Repository layer</li>
           <li><strong>Асинхронность:</strong> async/await — сеть, парсинг и перевод</li>
-          <li><strong>Хранение:</strong> Core Data — книги, прогресс чтения, история и кэш переводов</li>
+          <li><strong>Хранение:</strong> Core Data — книги, прогресс чтения, словарь, история и кэш переводов</li>
           <li><strong>Backend:</strong> Node.js + Express — API-прокси, rate limit, валидация запросов</li>
           <li><strong>Перевод:</strong> self-hosted LibreTranslate за Nginx и HTTPS</li>
           <li><strong>Инфраструктура:</strong> Docker Compose, Nginx, Let’s Encrypt, Cloudflare DNS</li>
@@ -182,56 +223,14 @@
       </div>
 
       <div class="about" style="margin-top:16px">
-        <h3 class="section-title" style="margin:0 0 10px;">Путь к первому релизу</h3>
+        <h3 class="section-title" style="margin:0 0 10px;">Зачем я его делаю</h3>
 
-        <p style="margin:0 0 10px;">
-          Техническая основа уже готова. Сейчас фокус — довести основной пользовательский
-          сценарий до удобного состояния и подготовить первую сборку для TestFlight.
+        <p style="margin:0">
+          Smart-Trex для меня — не учебный экран и не набор демо-фич, а полноценный продукт,
+          где я могу самостоятельно принимать архитектурные и продуктовые решения. На нём я
+          глубже работаю с SwiftUI, WKWebView, асинхронностью, persistence, тестированием,
+          backend и инфраструктурой — теми областями, которые обычно распределены между несколькими командами.
         </p>
-
-        <p style="margin:12px 0 6px;"><strong>Уже реализовано</strong></p>
-        <ul class="bullets">
-          <li><strong>Библиотека книг:</strong> импорт EPUB, список книг, обложки, метаданные и прогресс чтения</li>
-          <li><strong>Reader:</strong> отображение глав, экран чтения и базовый reading experience</li>
-          <li><strong>Inline-перевод:</strong> нажатие на слово и получение перевода через app flow</li>
-          <li><strong>Экран переводчика:</strong> выбор языков, смена направления, результат, копирование и повтор</li>
-          <li><strong>Backend:</strong> рабочее API для перевода на <span class="mono">api.yekkee.me</span></li>
-          <li><strong>Локальное хранение:</strong> книги, история переводов и кэш переведённых слов</li>
-          <li><strong>Тесты:</strong> покрытие важной логики парсинга и бизнес-слоя</li>
-        </ul>
-
-        <p style="margin:12px 0 6px;"><strong>Следующие задачи</strong></p>
-        <ul class="bullets">
-          <li><strong>Корректный кэш переводов:</strong> ключ кэша должен учитывать текст, source и target</li>
-          <li><strong>Vocabulary:</strong> отделить словарь пользователя от технического кэша переводов</li>
-          <li><strong>Add to Vocabulary:</strong> сохранять в словарь только те слова, которые пользователь выбрал сам</li>
-          <li><strong>Review mode:</strong> простой режим карточек для повторения сохранённых слов</li>
-          <li><strong>Перевод фраз:</strong> переводить не только отдельные слова, но и выделенные фрагменты</li>
-          <li><strong>Настройки чтения:</strong> размер шрифта, тема, исходный язык и язык перевода</li>
-          <li><strong>App Store polish:</strong> onboarding, скриншоты, privacy policy и TestFlight-сборка</li>
-        </ul>
-
-        <p style="margin-top:10px; color:var(--muted)">
-          Текущий фокус: сделать сценарий чтение → перевод → словарь быстрым, понятным и надёжным.
-        </p>
-      </div>
-    </section>
-
-    <section id="pc" class="section container">
-      <h2 class="section-title">Мой ПК</h2>
-      <div class="about">
-        <ul class="bullets">
-          <li><strong>CPU:</strong> AMD Ryzen 7 7800X3D</li>
-          <li><strong>GPU:</strong> Palit GeForce RTX 5080 GamingPro</li>
-          <li><strong>Материнская плата:</strong> ASUS ROG STRIX B650E-E Gaming Wi-Fi</li>
-          <li><strong>RAM:</strong> 32 GB DDR5-6000 CL36 Kingston FURY Beast RGB (2×16 GB)</li>
-          <li><strong>Хранилище:</strong> Samsung 990 PRO 4 TB (M.2 NVMe) + Samsung 970 EVO Plus 1 TB</li>
-          <li><strong>Охлаждение:</strong> DeepCool LS520 (240 mm AIO)</li>
-          <li><strong>Корпус:</strong> ARDOR GAMING C305 V2, стеклянный фронт и боковая панель</li>
-          <li><strong>Вентиляторы:</strong> 7× ID-COOLING TF Series [TF-12025-ARGB] через хаб</li>
-          <li><strong>Блок питания:</strong> Seasonic Focus GX-850, 850W, 80+ Gold</li>
-          <li><strong>Монитор:</strong> 32" Samsung Odyssey OLED G8 G81SF S32FG810SI</li>
-        </ul>
       </div>
     </section>
 
